@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanh Tan Industrial Cluster – Strategic Manufacturing Hub in Northern Vietnam</title>
+  <meta name="description" content="Thanh Tan Industrial Cluster – 65 ha strategic manufacturing hub in Northern Vietnam. Direct access to CT08 Expressway, 60 km from Hai Phong Port, lease from USD 90/m²." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background: #0a0e1a; color: #e8edf5;
+      overflow-x: hidden; line-height: 1.6;
+    }
+    [data-lang="ja"] body, body.lang-ja { font-family: 'Noto Sans JP', 'Inter', sans-serif; }
+
+    :root {
+      --green: #1db954; --green-light: #26d966; --green-dark: #0f8c38;
+      --blue: #0d6efd; --blue-dark: #003f8a;
+      --navy: #0a1628; --navy-mid: #0f1e35; --navy-light: #162340;
+      --gold: #f0c040;
+      --text-primary: #e8edf5; --text-muted: #8fa3bc;
+      --border: rgba(255,255,255,0.08);
+      --glass: rgba(255,255,255,0.04); --glass-hover: rgba(255,255,255,0.08);
+      --shadow: 0 20px 60px rgba(0,0,0,0.5);
+      --radius: 16px; --radius-sm: 10px;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--green-dark); border-radius: 3px; }
+
+    /* ====== LANGUAGE TOGGLE ====== */
+    .lang-switcher {
+      display: flex; align-items: center; gap: 4px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50px; padding: 4px; flex-shrink: 0;
+    }
+    .lang-btn {
+      display: flex; align-items: center; gap: 5px;
+      padding: 6px 14px; border-radius: 50px; border: none;
+      font-size: 0.8rem; font-weight: 700; cursor: pointer;
+      transition: all 0.25s; background: transparent; color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+    .lang-btn.active {
+      background: linear-gradient(135deg, var(--green-dark), var(--blue-dark));
+      color: #fff; box-shadow: 0 4px 15px rgba(29,185,84,0.35);
+    }
+    .lang-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.08); }
+    .lang-flag { font-size: 1rem; }
+
+    /* Hidden by language */
+    .en-only { display: block; }
+    .ja-only { display: none; }
+    html[data-lang="ja"] .en-only { display: none; }
+    html[data-lang="ja"] .ja-only { display: block; }
+    .en-inline { display: inline; }
+    .ja-inline { display: none; }
+    html[data-lang="ja"] .en-inline { display: none; }
+    html[data-lang="ja"] .ja-inline { display: inline; }
+    .en-flex { display: flex; }
+    .ja-flex { display: none; }
+    html[data-lang="ja"] .en-flex { display: none; }
+    html[data-lang="ja"] .ja-flex { display: flex; }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 2rem;
+      background: rgba(10,14,26,0.85);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.3s ease; gap: 1rem;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+    .nav-logo img {
+      height: 44px; width: auto;
+      /* Remove white background from logo on dark navbar */
+      mix-blend-mode: lighten;
+      filter: brightness(1.1) contrast(1.05);
+      transition: opacity 0.3s;
+    }
+    .nav-logo:hover img { opacity: 0.85; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; flex: 1; justify-content: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500;
+      transition: color 0.3s; position: relative; white-space: nowrap;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--green); transform: scaleX(0); transition: transform 0.3s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff !important; padding: 10px 20px; border-radius: 50px;
+      font-weight: 600 !important; transition: transform 0.2s, box-shadow 0.2s !important;
+      text-decoration: none; font-size: 0.88rem; white-space: nowrap;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(29,185,84,0.4) !important; }
+
+    /* ====== HERO ====== */
+    .hero {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; padding: 100px 2rem 4rem;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(13,110,253,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse 60% 40% at 80% 80%, rgba(29,185,84,0.1) 0%, transparent 50%),
+                  linear-gradient(180deg, #0a1628 0%, #0a0e1a 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; opacity: 0.03;
+      background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-particles { position: absolute; inset: 0; overflow: hidden; }
+    .particle { position: absolute; border-radius: 50%; animation: float 8s ease-in-out infinite; opacity: 0.4; }
+    @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-30px) rotate(180deg); } }
+    .hero-content {
+      position: relative; z-index: 2; max-width: 1200px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(29,185,84,0.15); border: 1px solid rgba(29,185,84,0.3);
+      color: var(--green-light); padding: 6px 16px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease both;
+    }
+    .hero-badge::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green-light); animation: pulse-dot 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+    .hero-title {
+      font-family: 'Outfit', sans-serif; font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900; line-height: 1.05; color: #fff; margin-bottom: 1rem;
+      animation: fadeInUp 0.8s ease 0.1s both;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--green-light), #00c4ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; animation: fadeInUp 0.8s ease 0.2s both; }
+    .hero-tagline {
+      font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.02em; margin-bottom: 2.5rem;
+      animation: fadeInUp 0.8s ease 0.25s both;
+    }
+    .hero-tagline::before { content: '"'; } .hero-tagline::after { content: '"'; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.3s both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff; text-decoration: none; padding: 15px 30px;
+      border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+      transition: all 0.3s; box-shadow: 0 8px 32px rgba(29,185,84,0.35);
+      border: none; cursor: pointer;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 45px rgba(29,185,84,0.5); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; text-decoration: none; padding: 15px 30px;
+      border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+      transition: all 0.3s; backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+    .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2.5rem; animation: fadeInUp 0.8s ease 0.4s both; }
+    .stat-chip {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 14px 16px; transition: all 0.3s;
+    }
+    .stat-chip:hover { background: var(--glass-hover); border-color: rgba(29,185,84,0.3); }
+    .stat-chip-icon { font-size: 1.5rem; }
+    .stat-chip-value { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 800; color: #fff; line-height: 1; }
+    .stat-chip-label { font-size: 0.75rem; color: var(--text-muted); }
+    .hero-visual { position: relative; animation: fadeInRight 0.8s ease 0.3s both; }
+    .hero-image-frame {
+      position: relative; border-radius: 24px; overflow: hidden;
+      box-shadow: 0 30px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    .hero-image-frame img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .hero-image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(10,14,26,0.7) 100%); }
+    .hero-image-badge {
+      position: absolute; bottom: 20px; left: 20px; right: 20px;
+      background: rgba(10,22,40,0.9); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);
+      padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .hero-image-badge-text { font-size: 0.82rem; color: var(--text-muted); }
+    .hero-image-badge-value { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--green-light); }
+    .floating-card {
+      position: absolute; background: rgba(10,22,40,0.92); backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);
+      padding: 12px 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .floating-card-1 { top: -20px; right: -20px; animation: floatCard 3s ease-in-out infinite; }
+    .floating-card-2 { top: 50%; left: -25px; animation: floatCard2 3s ease-in-out infinite 1s; }
+    @keyframes floatCard { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes floatCard2 { 0%, 100% { transform: translateY(-50%); } 50% { transform: translateY(calc(-50% - 8px)); } }
+    .fc-icon { font-size: 1.4rem; }
+    .fc-val { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 800; color: #fff; line-height: 1; }
+    .fc-label { font-size: 0.7rem; color: var(--text-muted); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+
+    /* ====== SECTION BASE ====== */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-light);
+      background: rgba(29,185,84,0.1); border: 1px solid rgba(29,185,84,0.25);
+      padding: 5px 14px; border-radius: 50px; margin-bottom: 1rem;
+    }
+    .section-title { font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.15; }
+    .section-title .accent { color: var(--green-light); }
+    .section-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-header .section-desc { margin: 0 auto; }
+    hr.section-rule { border: none; height: 3px; width: 60px; margin: 1rem auto 0; background: linear-gradient(90deg, var(--green), var(--blue)); border-radius: 2px; }
+
+    /* ====== STATS BAND ====== */
+    .stats-band {
+      background: linear-gradient(135deg, #0d2044, #0a1628);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 3rem 2rem;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; max-width: 1200px; margin: 0 auto; }
+    .stat-item { text-align: center; padding: 2rem; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .stat-number { font-family: 'Outfit', sans-serif; font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #fff, var(--green-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.4rem; }
+    .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
+    .stat-sub { font-size: 0.75rem; color: var(--green); margin-top: 4px; }
+
+    /* ====== WHY SECTION ====== */
+    .why-section { background: var(--navy); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .why-card {
+      background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; transition: all 0.4s; position: relative; overflow: hidden; cursor: default;
+    }
+    .why-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--green), var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+    .why-card:hover { background: var(--glass-hover); border-color: rgba(29,185,84,0.25); transform: translateY(-6px); box-shadow: var(--shadow); }
+    .why-card:hover::before { transform: scaleX(1); }
+    .why-card-icon { width: 56px; height: 56px; border-radius: 14px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+    .icon-green { background: rgba(29,185,84,0.15); border: 1px solid rgba(29,185,84,0.25); }
+    .icon-blue { background: rgba(13,110,253,0.15); border: 1px solid rgba(13,110,253,0.25); }
+    .icon-orange { background: rgba(255,140,0,0.15); border: 1px solid rgba(255,140,0,0.25); }
+    .icon-purple { background: rgba(130,80,255,0.15); border: 1px solid rgba(130,80,255,0.25); }
+    .icon-teal { background: rgba(0,200,190,0.15); border: 1px solid rgba(0,200,190,0.25); }
+    .why-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; }
+    .why-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+
+    /* ====== CONNECTIVITY ====== */
+    .connectivity-section { background: linear-gradient(180deg, var(--navy-mid) 0%, #0a0e1a 100%); }
+    .connect-node { display: flex; align-items: center; gap: 1.5rem; background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: all 0.3s; }
+    .connect-node:hover { background: var(--glass-hover); border-color: rgba(29,185,84,0.3); transform: translateX(8px); }
+    .connect-node-icon { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, var(--navy-light), var(--navy-mid)); border: 2px solid var(--border); }
+    .connect-node-dist { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: var(--green-light); line-height: 1; }
+    .connect-node-name { font-size: 1rem; font-weight: 600; color: #fff; }
+    .connect-node-desc { font-size: 0.8rem; color: var(--text-muted); }
+    .map-image-wrap { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1); }
+    .map-image-wrap img { width: 100%; display: block; transition: transform 0.5s ease; }
+    .map-image-wrap:hover img { transform: scale(1.02); }
+    .map-image-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(5,9,18,0.95)); padding: 2.5rem 1.5rem 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .map-dist-chip { display: flex; align-items: center; gap: 8px; background: rgba(10,22,40,0.88); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.12); border-radius: 50px; padding: 8px 16px; }
+    .map-dist-chip .val { font-family:'Outfit',sans-serif; font-weight:800; font-size:1.1rem; color:var(--green-light); }
+    .map-dist-chip .lbl { font-size:0.75rem; color:rgba(255,255,255,0.65); }
+    .indecon-logo { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 6px 12px; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 0.05em; }
+    .route-3grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .route-badge-tag { background: rgba(29,185,84,0.25); border: 1px solid rgba(29,185,84,0.4); color: var(--green-light); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; }
+
+    /* ====== GALLERY ====== */
+    .gallery-section { background: #050912; }
+    .brochure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .brochure-card { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 1px solid var(--border); cursor: pointer; transition: all 0.4s; }
+    .brochure-card:hover { transform: translateY(-8px); box-shadow: 0 40px 100px rgba(0,0,0,0.7); border-color: rgba(29,185,84,0.3); }
+    .brochure-card img { width: 100%; display: block; object-fit: cover; transition: transform 0.5s; }
+    .brochure-card:hover img { transform: scale(1.04); }
+    .brochure-card-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(5,9,18,0.92) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.3s; }
+    .brochure-card:hover .brochure-card-overlay { opacity: 1; }
+    .brochure-card-title { font-family:'Outfit',sans-serif; font-weight:800; font-size:1rem; color:#fff; margin-bottom:0.3rem; }
+    .brochure-card-sub { font-size:0.8rem; color:var(--text-muted); }
+    .brochure-badge { position: absolute; top: 14px; right: 14px; background: linear-gradient(135deg, var(--green-dark), var(--blue-dark)); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 5px 12px; border-radius: 50px; }
+
+    /* ====== INFRASTRUCTURE ====== */
+    .infra-section { background: var(--navy); }
+    .infra-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .infra-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; transition: all 0.3s; }
+    .infra-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); border-color: rgba(29,185,84,0.2); }
+    .infra-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .infra-card h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .infra-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.55; }
+
+    /* ====== MASTER PLAN ====== */
+    .masterplan-section { background: #050912; }
+    .masterplan-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
+    .masterplan-image { border-radius: var(--radius); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.6); border: 1px solid var(--border); }
+    .masterplan-image img { width: 100%; display: block; object-fit: cover; }
+    .masterplan-zones { display: flex; flex-direction: column; gap: 0.75rem; }
+    .zone-item { display: flex; align-items: center; gap: 1rem; background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; transition: all 0.3s; }
+    .zone-item:hover { background: var(--glass-hover); transform: translateX(6px); }
+    .zone-num { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--green-dark), var(--blue-dark)); }
+    .zone-name { font-size: 0.88rem; font-weight: 500; color: #e0e8f0; }
+    .corner-badge { display: flex; align-items: flex-start; gap: 1rem; background: linear-gradient(135deg, rgba(29,185,84,0.1), rgba(13,110,253,0.1)); border: 1px solid rgba(29,185,84,0.25); border-radius: var(--radius); padding: 1.5rem; margin-top: 1.5rem; }
+    .corner-badge-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+    .corner-badge h4 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--green-light); margin-bottom: 0.4rem; }
+    .corner-badge p { font-size: 0.82rem; color: var(--text-muted); }
+
+    /* ====== INVESTMENT ====== */
+    .investment-section { background: var(--navy-mid); }
+    .investment-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .investment-list { display: flex; flex-direction: column; gap: 1rem; }
+    .inv-item { display: flex; align-items: flex-start; gap: 1rem; background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem 1.5rem; transition: all 0.3s; }
+    .inv-item:hover { background: var(--glass-hover); border-color: rgba(29,185,84,0.3); transform: translateX(6px); }
+    .inv-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .inv-title { font-weight: 700; color: #fff; font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .inv-desc { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; }
+    .ecosystem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .eco-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; transition: all 0.3s; text-align: center; }
+    .eco-card:hover { transform: translateY(-4px); border-color: rgba(29,185,84,0.3); }
+    .eco-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .eco-title { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .eco-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ====== COMPARISON ====== */
+    .comparison-section { background: var(--navy); }
+    .comparison-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; }
+    thead { background: linear-gradient(135deg, var(--green-dark), var(--blue-dark)); }
+    thead th { padding: 1.2rem 1.5rem; text-align: left; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.9rem; color: #fff; letter-spacing: 0.02em; }
+    thead th:nth-child(2) { color: var(--green-light); }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--glass); }
+    td { padding: 1rem 1.5rem; font-size: 0.9rem; color: var(--text-muted); }
+    td:first-child { font-weight: 600; color: #c0cedf; }
+    td:nth-child(2) { color: var(--green-light); font-weight: 600; }
+    .tag-advantage { display: inline-block; background: rgba(29,185,84,0.15); border: 1px solid rgba(29,185,84,0.3); color: var(--green-light); font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 8px; vertical-align: middle; }
+
+    /* ====== CTA ====== */
+    .cta-section { padding: 6rem 2rem; background: linear-gradient(135deg, #0a1628 0%, #0d2044 50%, #0a1628 100%); position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(29,185,84,0.08) 0%, transparent 70%); }
+    .cta-content { position: relative; z-index: 2; text-align: center; max-width: 700px; margin: 0 auto; }
+    .cta-content h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 1rem; }
+    .cta-content p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.5rem; }
+    .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-info { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .cta-info-item { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem; }
+    .cta-info-item span:first-child { color: var(--green-light); }
+
+    /* ====== CONTACT ====== */
+    .contact-section { background: #050912; padding: 5rem 2rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+    .contact-brand h2 { font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+    .contact-brand .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .dev-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; }
+    .dev-badge-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .dev-badge-name { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1rem; color: #fff; }
+    .dev-badge-sub { font-size: 0.72rem; color: var(--text-muted); }
+    .contact-links h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
+    .contact-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.88rem; }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .contact-item a:hover { color: var(--green-light); }
+
+    /* ====== FOOTER ====== */
+    footer { background: #020508; border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    footer p { color: var(--text-muted); font-size: 0.8rem; }
+    footer strong { color: var(--green-light); }
+
+    /* ====== ANIMATIONS ====== */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-visual { order: -1; }
+      .masterplan-grid { grid-template-columns: 1fr; }
+      .investment-layout { grid-template-columns: 1fr; }
+      .infra-grid { grid-template-columns: repeat(2, 1fr); }
+      .brochure-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .route-3grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .why-grid { grid-template-columns: 1fr; }
+      .infra-grid { grid-template-columns: 1fr; }
+      .ecosystem-grid { grid-template-columns: 1fr; }
+      section { padding: 4rem 1rem; }
+      .floating-card-1, .floating-card-2 { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo" aria-label="INDECON – Thanh Tan Industrial Cluster">
+      <img src="logo-indecon.png" alt="INDECON Industrial Infrastructure – Thanh Tan" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#why"><span class="en-inline">Why Thanh Tan</span><span class="ja-inline">選ばれる理由</span></a></li>
+      <li><a href="#connectivity"><span class="en-inline">Connectivity</span><span class="ja-inline">アクセス</span></a></li>
+      <li><a href="#infrastructure"><span class="en-inline">Infrastructure</span><span class="ja-inline">インフラ</span></a></li>
+      <li><a href="#investment"><span class="en-inline">Investment</span><span class="ja-inline">投資支援</span></a></li>
+      <li><a href="#comparison"><span class="en-inline">Compare</span><span class="ja-inline">比較</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-pressed="true">
+          <span class="lang-flag">🇬🇧</span> EN
+        </button>
+        <button class="lang-btn" id="btn-ja" onclick="setLang('ja')" aria-pressed="false">
+          <span class="lang-flag">🇯🇵</span> JP
+        </button>
+      </div>
+      <a href="#contact" class="nav-cta">
+        <span class="en-inline">Contact Us</span><span class="ja-inline">お問い合わせ</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="particle" style="width:6px;height:6px;background:rgba(29,185,84,0.6);top:20%;left:10%;animation-delay:0s;animation-duration:7s;"></div>
+      <div class="particle" style="width:4px;height:4px;background:rgba(0,196,255,0.5);top:60%;left:85%;animation-delay:2s;animation-duration:9s;"></div>
+      <div class="particle" style="width:8px;height:8px;background:rgba(29,185,84,0.3);top:80%;left:20%;animation-delay:4s;animation-duration:6s;"></div>
+      <div class="particle" style="width:5px;height:5px;background:rgba(13,110,253,0.5);top:35%;left:70%;animation-delay:1s;animation-duration:8s;"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="en-inline">🌟 Strategic Manufacturing Hub — Northern Vietnam</span>
+          <span class="ja-inline">🌟 ベトナム北部の戦略的工業団地</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="highlight">THANH TAN</span><br>
+          <span class="en-inline">Industrial Cluster</span>
+          <span class="ja-inline">工業団地</span>
+        </h1>
+        <p class="hero-tagline">
+          <span class="en-inline">Build Closer to Ports. Operate with Lower Costs.</span>
+          <span class="ja-inline">港に近く、低コストで操業。</span>
+        </p>
+        <p class="hero-subtitle">
+          <span class="en-inline">A 65-hectare premium industrial park with direct CT08 Expressway access, world-class infrastructure, and lease rates from USD 90/m².</span>
+          <span class="ja-inline">CT08高速道路直結・65ヘクタールの優良工業団地。世界水準のインフラ整備済み、リース価格USD 90/m²から。</span>
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">
+            📩 <span class="en-inline">Get Investment Info</span><span class="ja-inline">投資資料を請求</span>
+          </a>
+          <a href="#why" class="btn-secondary">
+            🔍 <span class="en-inline">Explore More</span><span class="ja-inline">詳しく見る</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-chip">
+            <span class="stat-chip-icon">🚢</span>
+            <div>
+              <div class="stat-chip-value">60 km</div>
+              <div class="stat-chip-label"><span class="en-inline">to Hai Phong Port</span><span class="ja-inline">ハイフォン港まで</span></div>
+            </div>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-icon">🏙️</span>
+            <div>
+              <div class="stat-chip-value">80 km</div>
+              <div class="stat-chip-label"><span class="en-inline">to Hanoi</span><span class="ja-inline">ハノイまで</span></div>
+            </div>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-icon">✈️</span>
+            <div>
+              <div class="stat-chip-value">90 min</div>
+              <div class="stat-chip-label"><span class="en-inline">to Noi Bai Airport</span><span class="ja-inline">ノイバイ空港まで</span></div>
+            </div>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-icon">💰</span>
+            <div>
+              <div class="stat-chip-value">$90/m²</div>
+              <div class="stat-chip-label"><span class="en-inline">Lease from</span><span class="ja-inline">リース価格（最低）</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="brochure-1.jpg" alt="Thanh Tan Industrial Cluster" loading="lazy" />
+          <div class="hero-image-overlay"></div>
+          <div class="hero-image-badge">
+            <div>
+              <div class="hero-image-badge-text"><span class="en-inline">Total Area</span><span class="ja-inline">総面積</span></div>
+              <div class="hero-image-badge-value">65 ha</div>
+            </div>
+            <div style="text-align:right">
+              <div class="hero-image-badge-text"><span class="en-inline">Industrial Land</span><span class="ja-inline">工業用地比率</span></div>
+              <div class="hero-image-badge-value" style="color:#00c4ff">&gt;73%</div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card floating-card-1">
+          <span class="fc-icon">👷</span>
+          <div>
+            <div class="fc-val">30,000+</div>
+            <div class="fc-label"><span class="en-inline">Workforce</span><span class="ja-inline">労働力</span></div>
+          </div>
+        </div>
+        <div class="floating-card floating-card-2">
+          <span class="fc-icon">📍</span>
+          <div>
+            <div class="fc-val">CT08</div>
+            <div class="fc-label"><span class="en-inline">Direct Access</span><span class="ja-inline">直結高速</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-icon">🌍</div>
+        <div class="stat-number" id="stat-area">65 ha</div>
+        <div class="stat-label"><span class="en-inline">Total Area</span><span class="ja-inline">総面積</span></div>
+        <div class="stat-sub"><span class="en-inline">Prime industrial land</span><span class="ja-inline">優良工業用地</span></div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-icon">👥</div>
+        <div class="stat-number" id="stat-work">30K+</div>
+        <div class="stat-label"><span class="en-inline">Workforce</span><span class="ja-inline">労働人口</span></div>
+        <div class="stat-sub"><span class="en-inline">Cost-competitive labor</span><span class="ja-inline">競争力ある人件費</span></div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-icon">🏘️</div>
+        <div class="stat-number" id="stat-pop">60K+</div>
+        <div class="stat-label"><span class="en-inline">Population</span><span class="ja-inline">周辺人口</span></div>
+        <div class="stat-sub"><span class="en-inline">Surrounding catchment</span><span class="ja-inline">労働力確保圏内</span></div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-icon">🏗️</div>
+        <div class="stat-number">&gt;73%</div>
+        <div class="stat-label"><span class="en-inline">Industrial Land</span><span class="ja-inline">工業用地比率</span></div>
+        <div class="stat-sub"><span class="en-inline">Maximized usable area</span><span class="ja-inline">有効活用率最大化</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY THANH TAN -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Our Advantages</span><span class="ja-inline">選ばれる理由</span></span>
+        <h2 class="section-title"><span class="en-inline">Why Choose <span class="accent">Thanh Tan?</span></span><span class="ja-inline">なぜ<span class="accent">タントゥアン</span>なのか？</span></h2>
+        <p class="section-desc">
+          <span class="en-inline">Five compelling reasons why leading manufacturers choose Thanh Tan Industrial Cluster as their base of operations.</span>
+          <span class="ja-inline">世界の製造業リーダーがタントゥアン工業団地を選ぶ5つの理由。</span>
+        </p>
+        <hr class="section-rule" />
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card-icon icon-green">📍</div>
+          <h3><span class="en-inline">Strategic Location</span><span class="ja-inline">戦略的立地</span></h3>
+          <p><span class="en-inline">Direct access to CT08 Expressway connecting Ninh Binh – Hai Phong and convenient access to Hanoi. Premium corner position at CT08 &amp; CT16 intersection.</span>
+          <span class="ja-inline">CT08高速道路に直結し、ニンビン〜ハイフォンを結ぶ。CT08とCT16の交差点という最良の角地に位置。</span></p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-card-icon icon-blue">🚛</div>
+          <h3><span class="en-inline">Logistics Advantage</span><span class="ja-inline">物流優位性</span></h3>
+          <p><span class="en-inline">Fast connectivity to seaports, airports and major industrial corridors in Northern Vietnam. Direct CT08 access minimizes transport time and costs.</span>
+          <span class="ja-inline">港湾・空港・ベトナム北部の主要工業回廊へ迅速アクセス。CT08直結により輸送時間とコストを最小化。</span></p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-card-icon icon-orange">👷</div>
+          <h3><span class="en-inline">Competitive Workforce</span><span class="ja-inline">豊富な労働力</span></h3>
+          <p><span class="en-inline">Over 30,000 working-age residents within the surrounding labor catchment area. Abundant, cost-competitive labor pool ready for recruitment.</span>
+          <span class="ja-inline">周辺地域の労働力人口3万人以上。豊富で競争力のある人件費の労働力がすぐに採用可能。</span></p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-card-icon icon-purple">⚡</div>
+          <h3><span class="en-inline">Ready Infrastructure</span><span class="ja-inline">完備されたインフラ</span></h3>
+          <p><span class="en-inline">Power, water, fiber-optic telecommunications and centralized wastewater treatment system. All utilities in place for immediate operations.</span>
+          <span class="ja-inline">電力・水道・光ファイバー通信・集中廃水処理設備が整備済み。即座に操業開始できる環境を提供。</span></p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-card-icon icon-teal">🤝</div>
+          <h3><span class="en-inline">Investor Support</span><span class="ja-inline">投資家支援</span></h3>
+          <p><span class="en-inline">Full investment procedure assistance, recruitment support and project implementation guidance. Comprehensive legal and financial services.</span>
+          <span class="ja-inline">投資手続き・採用支援・プロジェクト実施まで全面サポート。法律・金融サービスも完備。</span></p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-card-icon icon-green">🌱</div>
+          <h3><span class="en-inline">Future-Ready Expansion</span><span class="ja-inline">将来の拡張性</span></h3>
+          <p><span class="en-inline">Room for future expansion with reserved land zones. Green belts and open spaces for a sustainable, modern industrial environment.</span>
+          <span class="ja-inline">将来の拡張用地を確保済み。緑地帯と開放空間を備えた持続可能な近代工業環境。</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGIC CONNECTIVITY -->
+  <section class="connectivity-section" id="connectivity">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Strategic Connectivity</span><span class="ja-inline">交通アクセス</span></span>
+        <h2 class="section-title"><span class="en-inline">Connected to <span class="accent">Every Gateway</span></span><span class="ja-inline"><span class="accent">あらゆる拠点</span>へのアクセス</span></h2>
+        <p class="section-desc">
+          <span class="en-inline">Thanh Tan sits at the heart of Northern Vietnam's logistics network, with a real expressway map confirming unmatched access to ports, airports, and major cities.</span>
+          <span class="ja-inline">タントゥアンはベトナム北部の物流ネットワークの中心。実際の高速道路地図が、港・空港・主要都市への比類ないアクセスを証明します。</span>
+        </p>
+        <hr class="section-rule" />
+      </div>
+      <div class="map-image-wrap reveal" style="margin-bottom:3rem">
+        <div class="indecon-logo">INDECON · Industrial Infrastructure</div>
+        <img src="map-connectivity.jpg" alt="Traffic Connectivity Map – Thanh Tan Industrial Cluster" loading="lazy" />
+        <div class="map-image-caption">
+          <div class="map-dist-chip"><span class="val">40 km</span><span class="lbl"><span class="en-inline">Hung Yen City</span><span class="ja-inline">フンイェン市</span></span></div>
+          <div class="map-dist-chip"><span class="val">60 km</span><span class="lbl"><span class="en-inline">Hai Phong Port</span><span class="ja-inline">ハイフォン港</span></span></div>
+          <div class="map-dist-chip"><span class="val">100 km</span><span class="lbl"><span class="en-inline">Hanoi</span><span class="ja-inline">ハノイ</span></span></div>
+          <div class="map-dist-chip"><span class="val">120 km</span><span class="lbl"><span class="en-inline">Noi Bai Airport</span><span class="ja-inline">ノイバイ空港</span></span></div>
+        </div>
+      </div>
+      <div class="route-3grid reveal reveal-delay-1">
+        <div class="connect-node" style="flex-direction:column;text-align:center;padding:2rem 1.5rem;">
+          <div class="connect-node-icon" style="margin:0 auto 1rem;">🛣️</div>
+          <div class="connect-node-dist">CT08</div>
+          <div class="connect-node-name">Expressway</div>
+          <div class="connect-node-desc"><span class="en-inline">Ninh Binh – Hung Yen – Hai Phong</span><span class="ja-inline">ニンビン〜フンイェン〜ハイフォン</span></div>
+        </div>
+        <div class="connect-node" style="flex-direction:column;text-align:center;padding:2rem 1.5rem;">
+          <div class="connect-node-icon" style="margin:0 auto 1rem;">🛣️</div>
+          <div class="connect-node-dist">CT16</div>
+          <div class="connect-node-name">Expressway</div>
+          <div class="connect-node-desc"><span class="en-inline">Hung Yen – Hanoi direct route</span><span class="ja-inline">フンイェン〜ハノイ直通</span></div>
+        </div>
+        <div class="connect-node" style="flex-direction:column;text-align:center;padding:2rem 1.5rem;">
+          <div class="connect-node-icon" style="margin:0 auto 1rem;">🏗️</div>
+          <div class="connect-node-dist">DH.15</div>
+          <div class="connect-node-name"><span class="en-inline">Provincial Road</span><span class="ja-inline">省道</span></div>
+          <div class="connect-node-desc"><span class="en-inline">Thanh Tan CCN – Thai Binh City</span><span class="ja-inline">タントゥアン〜タイビン市</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROCHURE GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Official Documents</span><span class="ja-inline">公式資料</span></span>
+        <h2 class="section-title"><span class="en-inline">Investment <span class="accent">Brochure</span></span><span class="ja-inline">投資<span class="accent">パンフレット</span></span></h2>
+        <p class="section-desc">
+          <span class="en-inline">Official documents and development overview for Thanh Tan Industrial Cluster — prepared by INDECON Vietnam.</span>
+          <span class="ja-inline">INDECONベトナムが作成したタントゥアン工業団地の公式資料・開発概要。</span>
+        </p>
+        <hr class="section-rule" />
+      </div>
+      <div class="brochure-grid reveal">
+        <div class="brochure-card">
+          <img src="brochure-1.jpg" alt="Thanh Tan Industrial Cluster – Overview Brochure" loading="lazy" />
+          <div class="brochure-badge"><span class="en-inline">Page 1 of 2</span><span class="ja-inline">1ページ目</span></div>
+          <div class="brochure-card-overlay">
+            <div class="brochure-card-title"><span class="en-inline">Strategic Overview</span><span class="ja-inline">戦略的概要</span></div>
+            <div class="brochure-card-sub"><span class="en-inline">Why Thanh Tan · Key Facts · Connectivity</span><span class="ja-inline">選択理由・主要データ・交通アクセス</span></div>
+          </div>
+        </div>
+        <div class="brochure-card">
+          <img src="brochure-2.jpg" alt="Thanh Tan – Master Development Plan" loading="lazy" />
+          <div class="brochure-badge"><span class="en-inline">Page 2 of 2</span><span class="ja-inline">2ページ目</span></div>
+          <div class="brochure-card-overlay">
+            <div class="brochure-card-title"><span class="en-inline">Master Development Plan</span><span class="ja-inline">マスター開発計画</span></div>
+            <div class="brochure-card-sub"><span class="en-inline">Infrastructure · Investment Support · Comparison</span><span class="ja-inline">インフラ・投資支援・比較表</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section class="infra-section" id="infrastructure">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Infrastructure</span><span class="ja-inline">インフラ設備</span></span>
+        <h2 class="section-title"><span class="en-inline">World-Class <span class="accent">Infrastructure</span></span><span class="ja-inline">世界水準の<span class="accent">インフラ</span></span></h2>
+        <p class="section-desc"><span class="en-inline">Everything your business needs is already in place — built to international standards for seamless operations.</span><span class="ja-inline">事業運営に必要なすべてが整備済み。国際基準に基づくシームレスな操業環境を提供します。</span></p>
+        <hr class="section-rule" />
+      </div>
+      <div class="infra-grid">
+        <div class="infra-card reveal"><div class="infra-icon">⚡</div><h3><span class="en-inline">Stable Power Supply</span><span class="ja-inline">安定電力供給</span></h3><p><span class="en-inline">Dedicated power infrastructure ensuring stable and reliable supply for 24/7 industrial operations.</span><span class="ja-inline">24時間365日の安定した電力を確保する専用電力インフラ。</span></p></div>
+        <div class="infra-card reveal reveal-delay-1"><div class="infra-icon">💧</div><h3><span class="en-inline">Industrial Water Supply</span><span class="ja-inline">工業用水供給</span></h3><p><span class="en-inline">Clean water supply system meeting the highest industrial standards for manufacturing processes.</span><span class="ja-inline">製造工程の最高基準に適合したクリーンな工業用水供給システム。</span></p></div>
+        <div class="infra-card reveal reveal-delay-2"><div class="infra-icon">🌐</div><h3><span class="en-inline">Fiber Optic Telecom</span><span class="ja-inline">光ファイバー通信</span></h3><p><span class="en-inline">High-speed fiber optic connectivity for global operations, data transmission and digital needs.</span><span class="ja-inline">グローバル操業・データ通信・デジタル業務向けの高速光ファイバー回線。</span></p></div>
+        <div class="infra-card reveal reveal-delay-1"><div class="infra-icon">🛣️</div><h3><span class="en-inline">Internal Road Network</span><span class="ja-inline">構内道路網</span></h3><p><span class="en-inline">Wide internal roads designed for efficient traffic flow and heavy-duty logistics vehicles.</span><span class="ja-inline">大型物流車両の効率的な走行を考慮した広幅員の構内道路網。</span></p></div>
+        <div class="infra-card reveal reveal-delay-2"><div class="infra-icon">♻️</div><h3><span class="en-inline">Wastewater Treatment</span><span class="ja-inline">廃水処理設備</span></h3><p><span class="en-inline">Centralized wastewater treatment plant meeting all national and international environmental standards.</span><span class="ja-inline">国内外の環境基準を満たす集中型廃水処理プラント。</span></p></div>
+        <div class="infra-card reveal reveal-delay-3"><div class="infra-icon">🌳</div><h3><span class="en-inline">Green Landscape</span><span class="ja-inline">緑地環境</span></h3><p><span class="en-inline">Green belts and open spaces integrated throughout for a sustainable, productive environment.</span><span class="ja-inline">持続可能な環境のための緑地帯と開放空間を全域に配置。</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASTER PLAN -->
+  <section class="masterplan-section" id="masterplan">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Master Development Plan 1/500</span><span class="ja-inline">マスター開発計画 1/500</span></span>
+        <h2 class="section-title"><span class="en-inline">Intelligently <span class="accent">Designed Layout</span></span><span class="ja-inline">緻密に設計された<span class="accent">ゾーニング</span></span></h2>
+        <p class="section-desc"><span class="en-inline">9 distinct functional zones carefully planned for maximum operational efficiency and future growth.</span><span class="ja-inline">最高の操業効率と将来の成長を見据えた9つの機能ゾーニング。</span></p>
+        <hr class="section-rule" />
+      </div>
+      <div class="masterplan-grid">
+        <div class="masterplan-image reveal">
+          <img src="brochure-2.jpg" alt="Thanh Tan Master Development Plan 1:500" loading="lazy" />
+        </div>
+        <div class="reveal reveal-delay-2">
+          <h3 style="font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:1.25rem;">
+            <span class="en-inline">Functional Zones</span><span class="ja-inline">機能ゾーン</span>
+          </h3>
+          <div class="masterplan-zones">
+            <div class="zone-item"><div class="zone-num">1</div><span class="zone-name"><span class="en-inline">Main Entrance</span><span class="ja-inline">メインゲート</span></span></div>
+            <div class="zone-item"><div class="zone-num">2</div><span class="zone-name"><span class="en-inline">Administration Center</span><span class="ja-inline">管理センター</span></span></div>
+            <div class="zone-item"><div class="zone-num">3</div><span class="zone-name"><span class="en-inline">Utility Center</span><span class="ja-inline">ユーティリティセンター</span></span></div>
+            <div class="zone-item"><div class="zone-num">4</div><span class="zone-name"><span class="en-inline">Wastewater Treatment Plant</span><span class="ja-inline">廃水処理施設</span></span></div>
+            <div class="zone-item"><div class="zone-num">5</div><span class="zone-name"><span class="en-inline">Logistics &amp; Service Area</span><span class="ja-inline">物流・サービスエリア</span></span></div>
+            <div class="zone-item"><div class="zone-num">6</div><span class="zone-name"><span class="en-inline">Green Park &amp; Landscape</span><span class="ja-inline">緑地公園</span></span></div>
+            <div class="zone-item"><div class="zone-num">7</div><span class="zone-name"><span class="en-inline">Worker Housing &amp; Amenities</span><span class="ja-inline">従業員住宅・施設</span></span></div>
+            <div class="zone-item"><div class="zone-num">8</div><span class="zone-name"><span class="en-inline">Future Expansion Area</span><span class="ja-inline">将来拡張エリア</span></span></div>
+            <div class="zone-item"><div class="zone-num">9</div><span class="zone-name"><span class="en-inline">Reserved Land</span><span class="ja-inline">予備地</span></span></div>
+          </div>
+          <div class="corner-badge">
+            <div class="corner-badge-icon">📍</div>
+            <div>
+              <h4><span class="en-inline">Premium Corner Location</span><span class="ja-inline">プレミアム角地</span></h4>
+              <p><span class="en-inline">At the intersection of CT08 Expressway &amp; CT16 Road — maximum visibility and logistics access.</span><span class="ja-inline">CT08高速道路とCT16道路の交差点。最高の視認性と物流アクセスを誇る角地。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTMENT SUPPORT -->
+  <section class="investment-section" id="investment">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Investment Support &amp; Ecosystem</span><span class="ja-inline">投資支援・エコシステム</span></span>
+        <h2 class="section-title"><span class="en-inline">Your Success is <span class="accent">Our Priority</span></span><span class="ja-inline">お客様の成功が<span class="accent">私たちの使命</span></span></h2>
+        <p class="section-desc"><span class="en-inline">Comprehensive investment support and a full ecosystem of services to get your operations running fast.</span><span class="ja-inline">投資から操業まで、迅速なスタートを支える包括的なサポートとエコシステム。</span></p>
+        <hr class="section-rule" />
+      </div>
+      <div class="investment-layout">
+        <div>
+          <h3 style="font-family:'Outfit',sans-serif;font-weight:700;color:#fff;font-size:1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green-light)">🛡️</span>
+            <span class="en-inline">Investment Support Services</span><span class="ja-inline">投資サポートサービス</span>
+          </h3>
+          <div class="investment-list">
+            <div class="inv-item reveal"><span class="inv-icon">📋</span><div><div class="inv-title"><span class="en-inline">Investment Licensing Assistance</span><span class="ja-inline">投資ライセンス取得支援</span></div><div class="inv-desc"><span class="en-inline">Fast and efficient licensing support to accelerate your business setup.</span><span class="ja-inline">迅速な許認可手続き支援でビジネス立ち上げを加速。</span></div></div></div>
+            <div class="inv-item reveal reveal-delay-1"><span class="inv-icon">🤝</span><div><div class="inv-title"><span class="en-inline">Land Handover Support</span><span class="ja-inline">土地引渡しサポート</span></div><div class="inv-desc"><span class="en-inline">Smooth land handover and aftercare services throughout operations.</span><span class="ja-inline">スムーズな土地引渡しとアフターケアサービスを継続提供。</span></div></div></div>
+            <div class="inv-item reveal reveal-delay-2"><span class="inv-icon">🔍</span><div><div class="inv-title"><span class="en-inline">Recruitment Assistance</span><span class="ja-inline">採用支援</span></div><div class="inv-desc"><span class="en-inline">Expert support in finding the right talent from the local labor pool.</span><span class="ja-inline">地域の人材プールから最適な人材を見つけるための専門支援。</span></div></div></div>
+            <div class="inv-item reveal reveal-delay-3"><span class="inv-icon">🎓</span><div><div class="inv-title"><span class="en-inline">Workforce Training</span><span class="ja-inline">従業員研修</span></div><div class="inv-desc"><span class="en-inline">Training programs tailored to your specific investor needs.</span><span class="ja-inline">投資家のニーズに合わせたオーダーメイドの研修プログラム。</span></div></div></div>
+            <div class="inv-item reveal"><span class="inv-icon">⚖️</span><div><div class="inv-title"><span class="en-inline">Legal Support</span><span class="ja-inline">法務サポート</span></div><div class="inv-desc"><span class="en-inline">Comprehensive legal advisory for operating in Vietnam.</span><span class="ja-inline">ベトナムでの事業運営に関する包括的な法律アドバイザリー。</span></div></div></div>
+            <div class="inv-item reveal reveal-delay-1"><span class="inv-icon">🔗</span><div><div class="inv-title"><span class="en-inline">Supply Chain Connectivity</span><span class="ja-inline">サプライチェーン構築</span></div><div class="inv-desc"><span class="en-inline">Connect with local and global supply chains to optimize operations.</span><span class="ja-inline">国内外のサプライチェーンへの接続で事業を最適化。</span></div></div></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:'Outfit',sans-serif;font-weight:700;color:#fff;font-size:1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--green-light)">🌐</span>
+            <span class="en-inline">Investment Ecosystem</span><span class="ja-inline">投資エコシステム</span>
+          </h3>
+          <div class="ecosystem-grid">
+            <div class="eco-card reveal"><div class="eco-icon">🏠</div><div class="eco-title"><span class="en-inline">Expert Housing</span><span class="ja-inline">専門家向け住宅</span></div><div class="eco-desc"><span class="en-inline">High-quality housing for experts and management.</span><span class="ja-inline">専門家・管理職向けの高品質住宅。</span></div></div>
+            <div class="eco-card reveal reveal-delay-1"><div class="eco-icon">🏢</div><div class="eco-title"><span class="en-inline">Worker Accommodation</span><span class="ja-inline">労働者宿舎</span></div><div class="eco-desc"><span class="en-inline">Comprehensive accommodation for workers.</span><span class="ja-inline">従業員向けの充実した宿泊施設。</span></div></div>
+            <div class="eco-card reveal reveal-delay-2"><div class="eco-icon">🚚</div><div class="eco-title"><span class="en-inline">Logistics Services</span><span class="ja-inline">物流サービス</span></div><div class="eco-desc"><span class="en-inline">Integrated logistics and warehousing on-site.</span><span class="ja-inline">構内一体型の物流・倉庫サービス。</span></div></div>
+            <div class="eco-card reveal reveal-delay-3"><div class="eco-icon">🎓</div><div class="eco-title"><span class="en-inline">Training Center</span><span class="ja-inline">研修センター</span></div><div class="eco-desc"><span class="en-inline">On-site training to develop skilled workforce.</span><span class="ja-inline">熟練労働者育成のための構内研修センター。</span></div></div>
+            <div class="eco-card reveal"><div class="eco-icon">🏦</div><div class="eco-title"><span class="en-inline">Financial Services</span><span class="ja-inline">金融サービス</span></div><div class="eco-desc"><span class="en-inline">Banking and financial services on-site.</span><span class="ja-inline">銀行・金融サービスを構内で提供。</span></div></div>
+            <div class="eco-card reveal reveal-delay-1"><div class="eco-icon">💻</div><div class="eco-title"><span class="en-inline">IT Services</span><span class="ja-inline">ITサービス</span></div><div class="eco-desc"><span class="en-inline">Advanced IT infrastructure and digital solutions.</span><span class="ja-inline">先進ITインフラとデジタルソリューション。</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><span class="en-inline">Competitive Analysis</span><span class="ja-inline">競合比較</span></span>
+        <h2 class="section-title"><span class="en-inline">Thanh Tan vs <span class="accent">Other Parks</span></span><span class="ja-inline">タントゥアン vs <span class="accent">他の工業団地</span></span></h2>
+        <p class="section-desc"><span class="en-inline">See how Thanh Tan compares to typical industrial parks around Hanoi across key investment criteria.</span><span class="ja-inline">ハノイ周辺の一般的な工業団地との主要投資指標の比較。</span></p>
+        <hr class="section-rule" />
+      </div>
+      <div class="comparison-table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th><span class="en-inline">Criteria</span><span class="ja-inline">比較項目</span></th>
+              <th>✅ Thanh Tan Industrial Cluster</th>
+              <th><span class="en-inline">Typical Parks Around Hanoi</span><span class="ja-inline">ハノイ周辺の一般的な工業団地</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>💰 <span class="en-inline">Lease Price</span><span class="ja-inline">リース価格</span></td>
+              <td>From USD 90/m² <span class="tag-advantage"><span class="en-inline">Best Value</span><span class="ja-inline">最安値</span></span></td>
+              <td>USD 120 – 250/m²</td>
+            </tr>
+            <tr>
+              <td>🚢 <span class="en-inline">Distance to Seaport</span><span class="ja-inline">港湾までの距離</span></td>
+              <td>~60 km <span class="tag-advantage"><span class="en-inline">Closer</span><span class="ja-inline">近距離</span></span></td>
+              <td>100 – 150 km</td>
+            </tr>
+            <tr>
+              <td>👷 <span class="en-inline">Workforce</span><span class="ja-inline">労働力</span></td>
+              <td><span class="en-inline">Abundant, cost-competitive</span><span class="ja-inline">豊富・低コスト</span> <span class="tag-advantage"><span class="en-inline">Advantage</span><span class="ja-inline">優位</span></span></td>
+              <td><span class="en-inline">Higher labor costs</span><span class="ja-inline">人件費が高い</span></td>
+            </tr>
+            <tr>
+              <td>🏗️ <span class="en-inline">Land Availability</span><span class="ja-inline">用地確保</span></td>
+              <td><span class="en-inline">Room for expansion</span><span class="ja-inline">拡張余地あり</span> <span class="tag-advantage"><span class="en-inline">Available</span><span class="ja-inline">余裕あり</span></span></td>
+              <td><span class="en-inline">Nearly fully occupied</span><span class="ja-inline">ほぼ満席</span></td>
+            </tr>
+            <tr>
+              <td>🛣️ <span class="en-inline">Logistics Access</span><span class="ja-inline">物流アクセス</span></td>
+              <td><span class="en-inline">Direct CT08 &amp; CT16</span><span class="ja-inline">CT08・CT16直結</span> <span class="tag-advantage"><span class="en-inline">Superior</span><span class="ja-inline">最優秀</span></span></td>
+              <td><span class="en-inline">Varies by location</span><span class="ja-inline">立地による</span></td>
+            </tr>
+            <tr>
+              <td>📈 <span class="en-inline">Investment Efficiency</span><span class="ja-inline">投資効率</span></td>
+              <td><span class="en-inline">Optimized CAPEX &amp; OPEX</span><span class="ja-inline">CAPEX・OPEX最適化</span> <span class="tag-advantage"><span class="en-inline">Lower Costs</span><span class="ja-inline">低コスト</span></span></td>
+              <td><span class="en-inline">Higher upfront costs</span><span class="ja-inline">初期費用が高い</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-content reveal">
+      <span class="section-tag" style="margin-bottom:1.5rem">
+        <span class="en-inline">Ready to Invest?</span><span class="ja-inline">投資をご検討中ですか？</span>
+      </span>
+      <h2>
+        <span class="en-inline">Start Your Journey at<br><span style="color:var(--green-light)">Thanh Tan Today</span></span>
+        <span class="ja-inline">今すぐ<span style="color:var(--green-light)">タントゥアン</span>で<br>始めましょう</span>
+      </h2>
+      <p>
+        <span class="en-inline">Join the growing community of manufacturers and investors who have chosen Thanh Tan as their strategic base in Northern Vietnam. Request our full investment brochure or schedule a site visit.</span>
+        <span class="ja-inline">ベトナム北部の戦略的拠点としてタントゥアンを選んだ製造業・投資家のコミュニティに参加しませんか。投資パッケージの請求や現地視察のご予約はお気軽に。</span>
+      </p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn-primary">📩 <span class="en-inline">Request Investment Package</span><span class="ja-inline">投資資料を請求する</span></a>
+        <a href="tel:+84919351532" class="btn-secondary">📞 <span class="en-inline">Call Us Now</span><span class="ja-inline">今すぐお電話</span></a>
+      </div>
+      <div class="cta-info">
+        <div class="cta-info-item"><span>✅</span><span><span class="en-inline">Free site visit available</span><span class="ja-inline">現地視察無料</span></span></div>
+        <div class="cta-info-item"><span>✅</span><span><span class="en-inline">Japanese brochure available</span><span class="ja-inline">日本語パンフレットあり</span></span></div>
+        <div class="cta-info-item"><span>✅</span><span><span class="en-inline">Investment team on standby</span><span class="ja-inline">投資チーム常駐</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-brand reveal">
+        <h2>THANH TAN<br>INDUSTRIAL CLUSTER</h2>
+        <p class="subtitle"><span class="en-inline">Strategic Manufacturing Hub in Northern Vietnam</span><span class="ja-inline">ベトナム北部の戦略的製造拠点</span></p>
+        <div class="dev-badge" style="margin-top:1rem">
+          <div>
+            <div class="dev-badge-label"><span class="en-inline">Developer</span><span class="ja-inline">開発会社</span></div>
+            <div class="dev-badge-name">QH LAND</div>
+            <div class="dev-badge-sub">THAI BINH INVESTMENT<br><span style="color:var(--green);font-size:0.68rem">Member of INDECON VIETNAM</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-links reveal reveal-delay-1">
+        <h3>📬 <span class="en-inline">Contact Information</span><span class="ja-inline">お問い合わせ先</span></h3>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;"><span class="en-inline">Phone</span><span class="ja-inline">電話番号</span></div>
+            <a href="tel:+84919351532">+84 919 351 532</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Email</div>
+            <a href="mailto:takatran.indeco@gmail.com">takatran.indeco@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🌐</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;"><span class="en-inline">Website</span><span class="ja-inline">ウェブサイト</span></div>
+            <a href="http://thantran.indeco.vn" target="_blank" rel="noopener">thantran.indeco.vn</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;"><span class="en-inline">Location</span><span class="ja-inline">所在地</span></div>
+            <span><span class="en-inline">Hung Yen Province, Vietnam</span><span class="ja-inline">フンイェン省、ベトナム</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <strong>Thanh Tan Industrial Cluster</strong> |
+      <span class="en-inline">Developed by QH Land – Thai Binh Investment | Member of INDECON Vietnam</span>
+      <span class="ja-inline">QH Land – タイビン投資が開発 | INDECONベトナム加盟</span>
+    </p>
+    <p style="margin-top:0.5rem;font-size:0.75rem">
+      <span class="en-inline">Hung Yen Province, Vietnam</span><span class="ja-inline">ベトナム・フンイェン省</span> |
+      <a href="mailto:takatran.indeco@gmail.com" style="color:var(--green);text-decoration:none">takatran.indeco@gmail.com</a> |
+      <a href="tel:+84919351532" style="color:var(--green);text-decoration:none">+84 919 351 532</a>
+    </p>
+  </footer>
+
+  <script>
+    /* ===== LANGUAGE SWITCHER ===== */
+    function setLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+      document.getElementById('btn-ja').setAttribute('aria-pressed', lang === 'ja');
+      // Update html lang attribute
+      document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+      // Update page title
+      document.title = lang === 'ja'
+        ? 'タントゥアン工業団地 – ベトナム北部の戦略的製造拠点'
+        : 'Thanh Tan Industrial Cluster – Strategic Manufacturing Hub in Northern Vietnam';
+      // Persist preference
+      try { localStorage.setItem('tt-lang', lang); } catch(e) {}
+    }
+
+    // Restore saved language
+    try {
+      const saved = localStorage.getItem('tt-lang');
+      if (saved === 'ja') setLang('ja');
+    } catch(e) {}
+
+    /* ===== SCROLL REVEAL ===== */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    /* ===== NAVBAR SCROLL ===== */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.style.background = 'rgba(5,9,18,0.97)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';
+      } else {
+        navbar.style.background = 'rgba(10,14,26,0.85)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    /* ===== ANIMATED COUNTER ===== */
+    function animateCounter(el, target, suffix) {
+      const duration = 1800;
+      const startTime = performance.now();
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nums = entry.target.querySelectorAll('.stat-number');
+          if (nums[0]) animateCounter(nums[0], 65, ' ha');
+          if (nums[1]) animateCounter(nums[1], 30, 'K+');
+          if (nums[2]) animateCounter(nums[2], 60, 'K+');
+          if (nums[3]) nums[3].textContent = '>73%';
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsBand = document.querySelector('.stats-band');
+    if (statsBand) statsObserver.observe(statsBand);
+  </script>
+</body>
+</html>
