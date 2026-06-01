@@ -52,7 +52,14 @@
       color: #fff; box-shadow: 0 4px 15px rgba(29,185,84,0.35);
     }
     .lang-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.08); }
-    .lang-flag { font-size: 1rem; }
+    .lang-flag {
+      width: 22px; height: 16px;
+      border-radius: 3px;
+      object-fit: cover;
+      display: inline-block;
+      vertical-align: middle;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
 
     /* Hidden by language */
     .en-only { display: block; }
@@ -433,10 +440,10 @@
     <div class="nav-right">
       <div class="lang-switcher" role="group" aria-label="Language switcher">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-pressed="true">
-          <span class="lang-flag">🇬🇧</span> EN
+          <img class="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="English" /> EN
         </button>
         <button class="lang-btn" id="btn-ja" onclick="setLang('ja')" aria-pressed="false">
-          <span class="lang-flag">🇯🇵</span> JP
+          <img class="lang-flag" src="https://flagcdn.com/w40/jp.png" alt="日本語" /> JP
         </button>
       </div>
       <a href="#contact" class="nav-cta">
@@ -515,7 +522,11 @@
       </div>
       <div class="hero-visual">
         <div class="hero-image-frame">
-          <img src="brochure-1.jpg" alt="Thanh Tan Industrial Cluster" loading="lazy" />
+          <img src="brochure-1-en.jpg"
+               data-en-src="brochure-1-en.jpg"
+               data-ja-src="brochure-1-ja.jpg"
+               class="lang-img"
+               alt="Thanh Tan Industrial Cluster" loading="lazy" />
           <div class="hero-image-overlay"></div>
           <div class="hero-image-badge">
             <div>
@@ -688,7 +699,11 @@
       </div>
       <div class="brochure-grid reveal">
         <div class="brochure-card">
-          <img src="brochure-1.jpg" alt="Thanh Tan Industrial Cluster – Overview Brochure" loading="lazy" />
+          <img src="brochure-1-en.jpg"
+               data-en-src="brochure-1-en.jpg"
+               data-ja-src="brochure-1-ja.jpg"
+               class="lang-img"
+               alt="Thanh Tan Industrial Cluster – Overview Brochure" loading="lazy" />
           <div class="brochure-badge"><span class="en-inline">Page 1 of 2</span><span class="ja-inline">1ページ目</span></div>
           <div class="brochure-card-overlay">
             <div class="brochure-card-title"><span class="en-inline">Strategic Overview</span><span class="ja-inline">戦略的概要</span></div>
@@ -696,7 +711,11 @@
           </div>
         </div>
         <div class="brochure-card">
-          <img src="brochure-2.jpg" alt="Thanh Tan – Master Development Plan" loading="lazy" />
+          <img src="brochure-2-en.jpg"
+               data-en-src="brochure-2-en.jpg"
+               data-ja-src="brochure-2-ja.jpg"
+               class="lang-img"
+               alt="Thanh Tan – Master Development Plan" loading="lazy" />
           <div class="brochure-badge"><span class="en-inline">Page 2 of 2</span><span class="ja-inline">2ページ目</span></div>
           <div class="brochure-card-overlay">
             <div class="brochure-card-title"><span class="en-inline">Master Development Plan</span><span class="ja-inline">マスター開発計画</span></div>
@@ -738,7 +757,11 @@
       </div>
       <div class="masterplan-grid">
         <div class="masterplan-image reveal">
-          <img src="brochure-2.jpg" alt="Thanh Tan Master Development Plan 1:500" loading="lazy" />
+          <img src="brochure-2-en.jpg"
+               data-en-src="brochure-2-en.jpg"
+               data-ja-src="brochure-2-ja.jpg"
+               class="lang-img"
+               alt="Thanh Tan Master Development Plan 1:500" loading="lazy" />
         </div>
         <div class="reveal reveal-delay-2">
           <h3 style="font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:1.25rem;">
@@ -963,8 +986,13 @@
       document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
       // Update page title
       document.title = lang === 'ja'
-        ? 'タントゥアン工業団地 – ベトナム北部の戦略的製造拠点'
+        ? 'タントゥァン工業団地 – ベトナム北部の戦略的製造拠点'
         : 'Thanh Tan Industrial Cluster – Strategic Manufacturing Hub in Northern Vietnam';
+      // Swap bilingual images
+      document.querySelectorAll('img.lang-img').forEach(img => {
+        const src = lang === 'ja' ? img.dataset.jaSrc : img.dataset.enSrc;
+        if (src && img.src !== src) img.src = src;
+      });
       // Persist preference
       try { localStorage.setItem('tt-lang', lang); } catch(e) {}
     }
